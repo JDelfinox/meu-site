@@ -1,0 +1,21 @@
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif
+}
+table,td,tr,th{
+    border-style: solid;
+    border-width: 3px;
+    border-collapse: collapse;
+    border-color: darkblue;
+}
+div.tabela{
+    text-align: center; 
+    background-color:seagreen;
+}
+table{
+    margin: auto;
+    background-color: blueviolet;
+}
+h2{
+    text-align: center;
+}
