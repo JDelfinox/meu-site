@@ -4,8 +4,8 @@
  * Copyright 2023 Fonticons, Inc.
  */
 (function () {
-  'use strict';
-
+  'use strict'; 
+ 
   var _WINDOW = {};
   var _DOCUMENT = {};
 
