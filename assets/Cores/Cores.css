@@ -1,6 +1,6 @@
 :root{
        --cor-base: rgb(0, 0, 0);
-       --cor-principal: hsl(198,60%,37%);
+       --cor-principal: hsl(198, 47%, 70%);
        --cor-secundária: hsl(56, 83%, 45%);
 }
 
@@ -17,10 +17,11 @@ body{
 .quadrado{
        
        /*margin: auto;*/
-       width: 80px;
-       height: 80px;
+       width: 180px;
+       height: 180px;
        border-radius: 30%;
        border: solid;
+       padding: 5px;
 }
 
 .cor1{
