@@ -4,65 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simplifica - Estuda que Muda</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300&display=swap');
-        h1{
-            text-align: center;
-            border:1rem;
-            border-style:double;
-            margin: 10px 7px 10px 7px;    
-            background-color: darkgray;  
-            font-family: 'Ysabeau Sc', sans-serif; 
-            font-size: 35px;
-            
-           
-        }
-        .Container{
-            margin: 15px 1px;
-            text-align: center;
-        }
-        .logo{
-            
-            text-align: center;
-            
-        }
-        body{
-            background-color: gray;
-        }
-        .titulo{
-            background-color: black;
-            
-        }
-        
-    </style>
-</head>
+    <title>Cadastro</title> 
 <body>
-    <div class="titulo"><h1> <i class="fa-solid fa-bars"></i> Simplifica Educa</h1> 
-        
-    </div>
-    <div class="Container">
-   <img src="https://unificada.us-east-1.linodeobjects.com/656/banners/20230323140349-sobral_aberto2.jpg" width="75%">
-    </div>
-   <div class="logo">
-        <img src="data:image/png;base64,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" width="35%" alt="Logo Simplifica.Educa"><br>
-            Simplifica Educa é um site de Cursos preparatórios para cidades do Piaui e Região
-            Sejam bem-vindos à Simplifica Educa, a empresa de cursos online que está aqui para ajudar você a alcançar seus sonhos de passar em um concurso público e mudar de vida! Nós acreditamos que a educação é a chave para uma vida melhor e que quem estuda, muda.
-
-Nossa paixão por ensinar é o que nos move e nos motiva todos os dias. Temos orgulho em oferecer uma ampla variedade de cursos preparatórios para concursos públicos, com conteúdo de qualidade e uma equipe de professores experientes e dedicados.
-
-Sabemos que o caminho para a aprovação pode ser desafiador, mas estamos aqui para torná-lo mais fácil para você. Nossos cursos online são acessíveis e flexíveis, permitindo que você estude no seu próprio ritmo, onde e quando quiser. Além disso, oferecemos suporte e orientação para ajudá-lo em todas as etapas do processo de preparação para o concurso. Inscreva-se em um dos nossos cursos online e comece a se preparar hoje mesmo. Venha conosco e Simplifique sua vida!
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+   
 </body>
 </html>
