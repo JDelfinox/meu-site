@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PictureBUY - Venda suas Fotos</title>
+    <link rel="stylesheet" href="../assets/Cores/Cores.css">
+    <link rel="stylesheet" href="../Fontawesome/css/all.css">
+    
+    <style>
+       
+        
+        header{
+            border: 0px;
+            border-style: none;
+            background-color:#e4f4fe;
+            margin-left: -10px;
+            margin-top: -10px;
+            margin-right: -10px;
+            padding: 9px;
+            display: flex;
+            
+        }
+        body{
+            background-color: rgb(186, 232, 248);
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            border: 5px;
+            border-style: double;
+            padding: 2px;
+            position: relative ;
+           
+            display: inline-block;
+            border-radius: 40%
+
+        }
+        li{
+            
+            display: inline-block;
+            padding: 6px;
+            
+           
+
+        }
+        .logo{
+            padding: 5px;
+            display: flex;
+        }
+        .col{
+            display:flex;
+            
+        }
+        h1{
+          font-size: 25px;  
+         
+        }
+        
+       
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="novotrabalho.html">
+         <div class="logo">
+            <img src="../assets/css/logo.png" width="50%" title="Ir para a página inicial da Musicdot" alt="LOGO">
+        </div>
+        </a>
+            
+        <nav>
+            <ul style="background-color: darkred;">
+                <li >
+                  <a href="#" style="color: black;">  Perfil <i class="fa-solid fa-user"></i> </a>
+                </li>
+            </ul>
+             <ul style="background-color: rgb(131, 6, 6);">
+                <a href="Cadastro.html" style="color: black;"> <li> <strong>  Entrar </strong> </li> </a>
+             </ul>
+        </nav>
+    </header>
+     <h1>Em Alta:</h1>
+    
+    <div class="flex">
+        <div class="quadrado cor1">
+         <img src="data:image/jpeg;base64,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" alt="Emoji">   
+        </div>
+        <div class="quadrado cor2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdNDYV1HoGzFrVunClAN3uw7YUcqDf7uEb_DihalIXq9pVC2qRfZZ1sSUG_fPHziMRhdc&usqp=CAU" alt="">
+
+        </div>
+        <div class="quadrado cor3">
+            <img src="https://www.tlemcen-electronic.com/forum/image.php?u=70402&dateline=1643726632" alt="">
+        </div>
+    </div>
+    <div class="flex">
+        <div class="retangulo1">
+           <a href="#">Gelo784</a> 
+        </div>
+        <div class="retangulo2">
+           <a href="#">Matheuszinx</a> 
+        </div>
+        <div class="retangulo3">
+            <a href="#">Delfinozx</a>
+        </div>
+
+    </div>
+    <h1>Explorar:</h1>
+
+    
+    
+         
+  
+  
+  
+  
+      
+    
+
+   
+     
+    
+</body>
+
+</html>
