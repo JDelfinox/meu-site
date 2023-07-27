@@ -29,7 +29,7 @@
         a{
             text-decoration: none;
         }
-        ul{
+        ul.rodateto{
             border: 5px;
             border-style: double;
             padding: 2px;
@@ -39,7 +39,7 @@
             border-radius: 40%
 
         }
-        li{
+        li.cabecalho{
             
             display: inline-block;
             padding: 6px;
@@ -59,7 +59,9 @@
           font-size: 25px;  
          
         }
-        
+        #menu{
+            display: flex;
+        }
        
         
         
@@ -76,16 +78,18 @@
         </a>
             
         <nav>
-            <ul style="background-color: darkred;">
-                <li >
+            <ul class="rodateto" style="background-color: darkred;">
+                <li class="cabecalho">
                   <a href="#" style="color: black;">  Perfil <i class="fa-solid fa-user"></i> </a>
                 </li>
             </ul>
-             <ul style="background-color: rgb(131, 6, 6);">
-                <a href="Cadastro.html" style="color: black;"> <li> <strong>  Entrar </strong> </li> </a>
+             <ul class="rodateto" style="background-color: rgb(131, 6, 6);">
+                <a href="Cadastro.html" style="color: black;"> <li class="cabecalho"> <strong>  Entrar </strong> </li> </a>
              </ul>
         </nav>
     </header>
+
+	
      <h1>Em Alta:</h1>
     
     <div class="flex">
