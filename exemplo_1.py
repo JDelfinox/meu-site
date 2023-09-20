@@ -132,32 +132,44 @@
 # print(resultado)
 # print()
 
-print("Desafio 1.2")
-print()
+# print("Desafio 1.2")
+# print()
 
-def maior(a,b):
-    if a > b:
-        return a
-    else:
-        return b
+# def maior(a,b):
+#     if a > b:
+#         return a
+#     else:
+#         return b
     
-primeiro_numero = float(input("Primeiro valor:"))
-segundo_numero = float(input("Segundo Valor:"))
-resultado = maior(primeiro_numero, segundo_numero)
-print(resultado)
-print()
+# primeiro_numero = float(input("Primeiro valor:"))
+# segundo_numero = float(input("Segundo Valor:"))
+# resultado = maior(primeiro_numero, segundo_numero)
+# print(resultado)
+# print()
 
-print("Desafio 2.2")
-print()
+# print("Desafio 2.2")
+# print()
 
-def sinal(a):
-    if a > 0 :
-        return "positivo"
-    elif a < 0 :
-        return "negativo"
+# def sinal(a):
+#     if a > 0 :
+#         return "positivo"
+#     elif a < 0 :
+#         return "negativo"
 
-primeiro_numero = float(input("Qual seu numero:"))
-resultado = sinal(primeiro_numero)
+# primeiro_numero = float(input("Qual seu numero:"))
+# resultado = sinal(primeiro_numero)
+# print(resultado)
+
+def valido(a):
+    if a > 0:
+        return "Válido"
+    elif a < 10:
+        return "Válido"
+    else  :
+        return "Inválido"
+
+primeiro_numero = int(input("Qual seu numero:"))
+resultado = valido(primeiro_numero)
 print(resultado)
     
     
