@@ -1,0 +1,142 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Product Management
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js">
+  </script>
+ </head>
+ <body class="bg-gray-100">
+  <div class="flex h-screen">
+   <!-- Sidebar -->
+   <div class="bg-gray-800 text-white w-64 p-4 flex flex-col">
+    <div class="flex items-center mb-6">
+     <div class="bg-gray-700 rounded-full h-10 w-10 flex items-center justify-center mr-3">
+      <span class="text-xl font-bold">
+       RU
+      </span>
+     </div>
+     <div>
+      <h1 class="text-lg font-semibold">
+       Burger Time
+      </h1>
+      <p class="text-sm">
+       Burger Time
+      </p>
+     </div>
+    </div>
+    <nav class="flex-1">
+     <ul>
+      <li class="mb-2">
+       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+        <i class="fas fa-home mr-3">
+        </i>
+        Início
+       </a>
+      </li>
+      <li class="mb-2">
+       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+        <i class="fas fa-receipt mr-3">
+        </i>
+        Pedidos
+       </a>
+      </li>
+      <li class="mb-2">
+       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+        <i class="fas fa-box mr-3">
+        </i>
+        Produtos
+       </a>
+      </li>
+      <li class="mb-2">
+       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+        <i class="fas fa-history mr-3">
+        </i>
+        Histórico
+       </a>
+      </li>
+      <li class="mb-2">
+       <a class="flex items-center p-2 bg-gray-700 rounded" href="#">
+        <i class="fas fa-cog mr-3">
+        </i>
+        Configurações
+       </a>
+      </li>
+      <li class="mb-2">
+       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+        <i class="fas fa-question-circle mr-3">
+        </i>
+        Ajuda
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 flex flex-col">
+    <!-- Content -->
+    <div class="flex-1 flex overflow-hidden p-6">
+     <div class="w-full">
+      <h2 class="text-2xl font-semibold mb-4">
+       Gerar QR Code
+      </h2>
+      <div class="mb-4">
+       <label class="block text-gray-700 mb-2" for="qr-input">
+        Insira o ID da Mesa:
+       </label>
+       <input class="w-full border rounded p-2" id="qr-input" placeholder="Digite o ID da Mesa" type="text"/>
+      </div>
+      <div class="flex space-x-4">
+       <button class="bg-green-500 text-white p-2 rounded" onclick="generateQRCode()">
+        Gerar QR Code
+       </button>
+       <button class="bg-blue-500 text-white p-2 rounded" onclick="printQRCode()">
+        Imprimir QR Code
+       </button>
+      </div>
+      <div class="mt-6">
+       <canvas id="qr-code" class="w-64 h-64">
+       </canvas>
+      </div>
+      <div class="mt-4 flex items-center">
+       <h3 class="text-xl font-semibold" id="table-number">
+       </h3>
+      </div>
+      <div class="mt-4">
+       <h3 class="text-xl font-semibold" id="table-number-indicator">
+       </h3>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   function generateQRCode() {
+    const qrInput = document.getElementById('qr-input').value;
+    const qrCodeCanvas = document.getElementById('qr-code');
+    const tableNumber = document.getElementById('table-number');
+    const tableNumberIndicator = document.getElementById('table-number-indicator');
+    QRCode.toCanvas(qrCodeCanvas, qrInput, function (error) {
+      if (error) console.error(error);
+      console.log('QR code generated!');
+    });
+    tableNumber.textContent = `Número da Mesa: ${qrInput}`;
+    tableNumberIndicator.textContent = `Número da Mesa: ${qrInput}`;
+  }
+
+  function printQRCode() {
+    const qrCodeCanvas = document.getElementById('qr-code');
+    const dataUrl = qrCodeCanvas.toDataURL();
+    const windowContent = '<!DOCTYPE html>';
+    windowContent += '<html>';
+    windowContent += '<head><title>Print QR Code</title></head>';
+    windowContent += '<body>';
+    windowContent += `<img src="${dataUrl}">`;
+    windowContent += '</body>';
+    windowContent += '</html>';
+    }
